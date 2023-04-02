@@ -43,7 +43,7 @@ public class Scanner {
         while(!isAtEnd()){
 //          we are at the beginning of the next lexeme
             start = current;
-            scanTokens();
+            scanToken();
         }
         tokens.add(new Token(EOF, "", null, line));
 
@@ -77,12 +77,10 @@ public class Scanner {
                 }
             }
             case ' ', '\r', '\t' -> {}
-            case '\n' -> { line++; }
+            case '\n' -> line++;
 
-//            Literals
-            case '"' -> {
-                string();
-            }
+            /* Literals */
+            case '"' -> string();
             default -> {
                 if(isDigit(c)){
                     number();
@@ -173,7 +171,6 @@ public class Scanner {
         String text = source.substring(start, current);
         tokens.add(new Token(type, text, literal, line));
     }
-
 
     private boolean isAtEnd() {
         return current >= source.length();
