@@ -1,2 +1,0 @@
-# crafting-interpreters
-Welcome to my journey of exploring Crafting Interpreters! This repository is a record of my progress as I delve into the fascinating world of creating scripting languages. Follow along as I tackle high-level concepts such as parsing and semantics, and delve into the nitty-gritty details of bytecode representation and garbage collection. This repository will contain code snippets, notes, and reflections on the book, as well as any personal projects I may undertake. Join me on this exciting adventure of learning and discovery!
