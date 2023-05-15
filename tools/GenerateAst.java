@@ -27,11 +27,12 @@ public class GenerateAst {
         file.getParentFile().mkdirs(); // Create directories if they don't exist
         PrintWriter writer = new PrintWriter(path, StandardCharsets.UTF_8);
 
-        writer.println("package com.craftinginterpreters.lox;");
+        writer.println("package com.craftinginterpreters.lox.generated;");
+        writer.println("import com.craftinginterpreters.lox.Token;");
         writer.println();
         writer.println("import java.util.List;");
         writer.println();
-        writer.println("abstract class" + basename + "{");
+        writer.println("public abstract class " + basename + "{");
 
         defineVisitor(writer, basename, types);
 
